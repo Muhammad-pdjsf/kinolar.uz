@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinolar sayti</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.bundle.js"></script>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        .navbar {
+            background: #1a1a1a;
+        }
+
+        .banner {
+            background: url('https://images.unsplash.com/photo-1517602302552-471fe67acf66') center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        .movie-card {
+            background: #1c1c1c9d;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .rating {
+            color: gold;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* 📱 Mobilga moslash uchun qo‘shimcha qism */
+        @media (max-width: 768px) {
+            .banner {
+                height: 50vh;
+            }
+
+            .banner h1 {
+                font-size: 1.8rem;
+            }
+
+            .banner p {
+                font-size: 1rem;
+            }
+
+            .movie-card img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link custom-page" href="#">1-sahifa</a>
+            </li>
+            <li class="page-item">
+            </li>
+        </ul>
+    </nav>
+
+    <style>
+        .custom-page {
+            border-radius: 15px !important;
+            /* tugma yumaloq */
+            background-color: #6c757d;
+            /* bootstrap secondary rangi */
+            color: white;
+            /* matn oq */
+            border: none;
+            /* border olib tashlash */
+            margin: 0 5px;
+            /* oraliq */
+            transition: 0.3s;
+        }
+
+        .custom-page:hover {
+            background-color: #5a6268;
+            /* hover effekti */
+            color: white;
+        }
+    </style>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kinolar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Bosh sahifa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#movies">Yangi kinolar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#movies">Mashhur kinolar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div>
+            <h1>Eng So‘ngi Kinolarni Tomosha Qiling</h1>
+            <p>HD sifatda, bepul va qulay</p>
+            <a href="#movies" class="btn btn-danger btn-lg">Hozir Tomosha Qiling</a>
+        </div>
+    </section>
+
+
+    <div id="movies" class="container my-5">
+        <h2 class="mb-4 text-center">Mashhur Kinolar</h2>
+        <div class="row g-4">
+
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="https://i.pinimg.com/736x/3f/89/85/3f89852a4bbb5f89b89e2e218b28c83a.jpg" alt="Movie">
+                    <div class="p-3">
+                        <h5>Doctor Strange</h5>
+                        <p class="rating">⭐⭐⭐⭐</p>
+                        <a href="https://www.youtube.com/watch?v=aWzlQ2N6qqg" target="_blank"
+                            class="btn btn-primary w-100">Tomosha qilish</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="https://i.pinimg.com/550x/d0/85/b8/d085b81e13841634fbba035979b5801b.jpg" alt="Movie">
+                    <div class="p-3">
+                        <h5>Black Panther</h5>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <a href="https://www.youtube.com/watch?v=xjDjIWPwcPU" target="_blank"
+                            class="btn btn-primary w-100">Tomosha qilish</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="https://avatars.mds.yandex.net/i?id=15ec4a923eb60ce1898a70c9244ccb35_l-5097070-images-thumbs&n=13"
+                        alt="Movie">
+                    <div class="p-3">
+                        <h5>Spider-Man: No Way Home</h5>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <a href="https://www.youtube.com/watch?v=JfVOs4VSpmA" target="_blank"
+                            class="btn btn-primary w-100">Tomosha qilish</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avengers -->
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="https://yandex-images.clstorage.net/4oybj8221/1e2fb67O0/UXLRBRz45K-QCMbFFjEU6OpLLM6ob2SOuoM_Qgmnr_jL0rrsPbOrmah-Ol1OWLU3De3JpRXmKE71DHtG1P-73RxnhBRJ1Z2zkByX6T8BfNiqHhy7pAct7opb0rKUejNVVjNrDIyK_vj4ckopAghR21yQ_NBU8sUzJXWjBuBuTiyBwlllFKg1C3DMG7FegUQswi68Nnzu0BfiQw5erDKnPZZPTyyQxtacpMbrDa4QHb54hFxAhD4pN6UVh5Kkrgow8ebFmYC4mSO8yBe5vpFwfJbCUDLk3kw_9utKahTec23SE9foKPrCXLiGt5XyFGHyvGjc9Lz2maPRzffO4IKaNJ0iaU18hAHfsBxXWU7daOjqhihyEA7EYwYrih74OsuBhhs7lLCGbiT8xo_xIsCN-mSkNIjowulznQE_6gDuzpT5Qm2ZtNDtzxRcx1HqGYTgmq6cshBq6HsOsyKqmM5LoQr_V5ycZmoIgF6bUa5Yhb580FBIYC4Fz4nVl4KsRgaoYYZ1eYDk_fccoFspEuXs5Jbi8GrspkCXQjf-Pvjq39ESH-tMsP46nGymu_mqYCGavDzIhLQaCSv1IZvOpKq6kO1iacUwuHE3IHwz0aINaOwi6gQmCILIM26LgnqAFovFJr9PrFxO1uSsunMhfsRFGkRQpMzM6r2_dcVrTrBCAmxdEs1xWAABd3Cw68n6mXREGk5AqrQqFEN2jx6yFF4n_f67f4QU2rbk4F4LBapIGf6UMEBE1MrlRzkF_wZs3pZo2bppmSyMdUv0BGt1kiVsPE6esEp4NvQfYjOqApxOm03KR2ekGD5KBPxWPy3yaD3GPACQQFgOqZfJPWNujPruaNEGseWgrAWrDNhH9WYxdJhG9rjGtKocJ6K7NtYE2otJiiu7gHziHhis9qexqux99kiQ2OjA6vGHmRmnFuCe3qwVrgVlVNSRq5jczz1CUXTkwrJ8onDyBDteu7qeWDKc"
+                        alt="Movie">
+                    <div class="p-3">
+                        <h5>Avengers: Endgame</h5>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                        <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c" target="_blank"
+                            class="btn btn-primary w-100">Tomosha qilish</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 KinoUz. Barcha huquqlar himoyalangan.
+        <div class="vr"></div>
+        </p>
+        <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10"
+            aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped" style="width: 100%"></div>
+        </div>
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <div class="vr"></div>
+            </div>
+        </div>
+        <br>
+        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+            Films site
+        </button>
+    </footer>
+
+</body>
+
+</html>
